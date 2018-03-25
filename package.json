@@ -1,0 +1,27 @@
+{
+  "name": "nodejs_template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/encho253/NodeJs_Template.git"
+  },
+  "author": "Encho Enevski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/encho253/NodeJs_Template/issues"
+  },
+  "homepage": "https://github.com/encho253/NodeJs_Template#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongodb": "^3.0.4",
+    "pug": "^2.0.0-rc.4"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {}
+}
