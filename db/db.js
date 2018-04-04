@@ -1,8 +1,10 @@
-const mongoClient = require('mongodb').MongoClient;
+let mongoClient = require('mongodb').MongoClient;
 
-const init = (connectionString) => {
-    console.log(mongoClient);
-    return mongoClient.connect(connectionString);
+let init = (connectionString, databaseName) => {
+    return mongoClient.connect(connectionString)
+        .then((client) => {
+            return client.db(databaseName)
+        });
 };
 
 module.exports = { init };

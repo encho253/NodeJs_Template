@@ -2,9 +2,8 @@ class BaseData {
     constructor(db, ModelClass) {
         this.db = db;
         this.ModelClass = ModelClass;
-        // this.collectionName = this._getCollectionName();
-        // this.db.collection = this.collectionName;
-        // this.collection = this.db.collection;
+        this.collectionName = this._getCollectionName();
+        this.collection = this.db.collection(this.collectionName);
     }
 
     getAll() {
@@ -15,10 +14,7 @@ class BaseData {
     }
 
     create(model) {
-        var dbo = this.db.db("items-db");
-        dbo.createCollection("items")
-
-        return dbo.collection("items").insert(model);
+        return this.collection.insert(model);
     }
 
     _getCollectionName() {
